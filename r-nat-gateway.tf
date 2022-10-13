@@ -4,7 +4,6 @@ resource "azurerm_public_ip" "pip" {
   location            = var.location
   name                = local.public_ip_name
   resource_group_name = var.resource_group_name
-  zones               = var.public_ip_zones
   sku                 = "Standard"
 
   tags = merge(

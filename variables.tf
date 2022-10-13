@@ -3,14 +3,6 @@ variable "location" {
   type        = string
 }
 
-variable "location_short" {
-  description = "Short name of Azure region to use"
-  type        = string
-}
-
-
-
-
 variable "resource_group_name" {
   description = "Name of the resource group to use"
   type        = string
@@ -28,11 +20,6 @@ variable "public_ip_custom_name" {
   default     = null
 }
 
-variable "public_ip_zones" {
-  description = "Public ip Zones to configure."
-  type        = list(string)
-  default     = null
-}
 
 variable "public_ip_ids" {
   description = "List of public ips to use. Create one ip if not provided"

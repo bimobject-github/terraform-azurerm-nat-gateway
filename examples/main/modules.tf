@@ -43,16 +43,11 @@ module "azure_network_subnet" {
   subnet_cidr_list     = ["10.0.1.0/26"]
 }
 
-module "nat_gateway" {
-  source  = "claranet/nat-gateway/azurerm"
-  version = "x.x.x"
+/* module "nat_gateway" {
+  source  = "github.com/bimobject-github/terraform-azurerm-key-vault"
+  
+  location            = 
+  resource_group_name = 
 
-  client_name         = var.client_name
-  environment         = var.environment
-  location            = module.azure_region.location
-  location_short      = module.azure_region.location_short
-  stack               = var.stack
-  resource_group_name = module.rg.resource_group_name
-
-  subnet_ids = [module.azure_network_subnet.subnet_id]
-}
+  subnet_ids = []
+} */
